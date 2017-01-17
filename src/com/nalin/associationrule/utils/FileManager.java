@@ -9,4 +9,5 @@ package com.nalin.associationrule.utils;
  */
 public interface FileManager {
 
+	public void getData(String filePath);
 }
