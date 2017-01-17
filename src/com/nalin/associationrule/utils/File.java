@@ -14,14 +14,13 @@ import java.util.Map;
  * @author nalin
  *
  */
-public class FileManagerImpl implements FileManager {
+public class File {
 
-	private BufferedReader br;
-	private FileReader fr;
-	private Map<String, Integer> itemset;
+	private static BufferedReader br;
+	private static FileReader fr;
+	private static Map<String, Integer> itemset;
 
-	@Override
-	public void getData(String filePath) {
+	public static Map<String, Integer> getData(String filePath) {
 
 		String line;
 		String[] items;
@@ -64,7 +63,8 @@ public class FileManagerImpl implements FileManager {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
+		
+		return itemset;
 	}
 
 }

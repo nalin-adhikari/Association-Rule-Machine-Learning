@@ -10,12 +10,13 @@ import java.util.TreeMap;
  * @author nalin
  *
  */
-public class DataManagerImpl implements DataManager {
+public class Data {
 
-	@Override
-	public Map<String, Integer> removeOutNumber(Map<String, Integer> itemset) {
+	private static Map<String, Integer> newItemset;
+	
+	public static Map<String, Integer> removeOutNumber(Map<String, Integer> itemset) {
 
-		Map<String, Integer> newItemset = new TreeMap<String, Integer>();
+		newItemset = new TreeMap<String, Integer>();
 
 		itemset.forEach((k, v) -> {
 			if (v > 1) {
